@@ -4,7 +4,7 @@ import Navigation from "./components/Navigation.vue";
 
 <template>
 	<Navigation />
-	<main lg:flex lg:items-center lg:justify-between lg:px-35>
+	<main lg="flex items-center justify-between px-35">
 		<img
 			src="./assets/images/image-hero-mobile.png"
 			alt=""
@@ -12,56 +12,39 @@ import Navigation from "./components/Navigation.vue";
 			h-full
 			lg:hidden
 		/>
-		<div lg:mr-30 lg:mt-20>
-			<div mt-8 text-center lg:text-left>
-				<h2 text=" 1.8rem Black" lg:text-5rem>Make remote work</h2>
+		<div lg="mr-30 mt-20">
+			<div mt-8 text="center lg:left">
+				<h2 text="1.8rem Black lg:5rem">Make remote work</h2>
 				<p
-					text="Gray sm"
-					mt-3
-					px-5
+					text="Gray sm lg:16px"
+					p="x-5 lg:x-0 lg:r-20"
+					m="t-3 lg:t-10 lg:b-10"
 					tracking-tight
-					lg:px-0
-					lg:text-16px
-					lg:pr-20
-					lg:mt-10
-					lg:mb-10
 				>
 					Get your team in sync, no matter your location. Streamline processes,
 					create team rituals, and watch productivity soar.
 				</p>
-				<div flex items-center justify-center mt-5 lg:justify-start>
+				<div mt-5 flex items-center justify="center lg:start">
 					<button
-						text-White
+						text="White lg:16px"
+						p="3 lg:y-4 lg:x-6"
+						hover="bg-transparent text-Black "
 						bg-Black
 						rounded-xl
-						p-3
-						px-18px
-						lg:text-16px
-						lg:py-4
-						lg:px-6
 						border
-						hover="bg-transparent text-Black "
 					>
 						Learn More
 					</button>
 				</div>
 			</div>
 			<div
-				flex
-				items-center
-				justify-between
-				mt-8
-				mx-2
-				mb-5
-				md:mx-5
-				md:mt-10
-				lg:mt-20
-				lg:mx-0
+				class="flex items-center justify-between"
+				m="t-8 x-2 b-5 md:x-5 md:t-10 lg:t-20 lg:x-0"
 			>
-				<img src="./assets/images/client-databiz.svg" alt="" w-17 md:w-26 />
-				<img src="./assets/images/client-audiophile.svg" alt="" w-10 md:w-16 />
-				<img src="./assets/images/client-maker.svg" alt="" w-14 md:w-26 />
-				<img src="./assets/images/client-meet.svg" alt="" w-14 md:w-26 />
+				<img src="./assets/images/client-databiz.svg" alt="" w="17 md:26" />
+				<img src="./assets/images/client-audiophile.svg" alt="" w="10 md:16" />
+				<img src="./assets/images/client-maker.svg" alt="" w="14 md:26" />
+				<img src="./assets/images/client-meet.svg" alt="" w="14 md:26" />
 			</div>
 		</div>
 		<img

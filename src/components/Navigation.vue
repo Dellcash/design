@@ -36,19 +36,19 @@ onClickOutside(outSide, () => {
 </script>
 
 <template>
-	<header p-5 lg:p-10 lg:flex lg:items-center lg:justify-between>
-		<div flex items-center justify-between lg:justify-start>
-			<h2 text-2rem tracking-tighter lg:text-3rem>snap</h2>
+	<header p-5 lg="justify-between items-center flex p-10">
+		<div flex items-center justify="between lg:start">
+			<h2 tracking-tighter text="2rem lg:40px">snap</h2>
 
 			<button @click="menu = !menu" lg:hidden>
 				<img v-if="menu" src="../assets/images/icon-menu.svg" alt="" />
 			</button>
 
 			<div ml-13 hidden lg:block>
-				<ul flex text="xl Gray" space-x-13>
+				<ul text="xl Gray" flex space-x-13>
 					<li relative>
 						<button @click="feature = !feature">
-							<span pr-2 text="xl Gray" hover:text-Black>Features</span>
+							<span pr-2 text="xl Gray hover:Black">Features</span>
 							<img
 								v-if="!feature"
 								src="../assets/images/icon-arrow-down.svg"
@@ -60,22 +60,13 @@ onClickOutside(outSide, () => {
 							ref="outSide"
 							v-if="feature"
 							text="sm Gray"
-							p-8
-							my-5
-							space-y-2
-							absolute
-							right-0
-							rounded-xl
-							shadow-xl
-							bg="[#fff]"
+							pos="absolute right-0"
+							class="p-6 my-5 space-y-2 rounded-xl shadow-xl bg-[#fff]"
 						>
 							<li
 								v-for="feature in features"
 								:key="feature"
-								flex
-								items-center
-								cursor-pointer
-								hover:text-Black
+								class="flex items-center cursor-pointer hover:text-Black"
 							>
 								<img :src="feature.img" alt="" pr-3 />
 								{{ feature.title }}
@@ -85,7 +76,7 @@ onClickOutside(outSide, () => {
 
 					<li relative>
 						<button @click="company = !company">
-							<span pr-2 text="xl Gray" hover:text-Black>Company</span>
+							<span pr-2 text="xl Gray hover:Black">Company</span>
 							<img
 								v-if="!company"
 								src="../assets/images/icon-arrow-down.svg"
@@ -96,14 +87,8 @@ onClickOutside(outSide, () => {
 						<ul
 							ref="outSide"
 							v-if="company"
-							p-5
-							my-5
-							space-y-2
-							absolute
-							left-0
-							rounded-xl
-							shadow-xl
-							bg="[#fff]"
+							pos="absolute left-0"
+							class="p-5 my-5 space-y-2 rounded-xl shadow-xl bg-[#ff]"
 							text="sm Gray"
 						>
 							<li>History</li>
@@ -119,13 +104,12 @@ onClickOutside(outSide, () => {
 			</div>
 		</div>
 		<div hidden lg:block space-x-5>
-			<button text="base Gray" p-4 hover:text-Black>Login</button>
+			<button text="base Gray hover:Black" p-4>Login</button>
 			<button
 				text="base Gray"
 				border
 				rounded-5
-				px-5
-				py-3
+				p="x-5 y-3"
 				hover="bg-transparent border text-Black"
 			>
 				Register
@@ -134,19 +118,18 @@ onClickOutside(outSide, () => {
 	</header>
 	<nav>
 		<div>
-			<div v-if="!menu" bg="#000" h-full fixed top-0 opacity-50 w-full />
+			<div
+				v-if="!menu"
+				pos="fixed top-0"
+				class="h-full opacity-50 w-full bg-[#000]"
+			/>
 			<Transition name="slide">
 				<div
 					v-if="!menu"
-					fixed
-					w="[60%]"
-					md="w-[40%]"
-					h-full
-					bg-white
-					top-0
-					right-0
+					pos="fixed top-0 right-0"
+					class="w-[60%] md:w-[40%] h-full bg-white"
 				>
-					<div flex justify-end p-5>
+					<div class="flex justify-end p-5">
 						<button @click="menu = !menu">
 							<img src="../assets/images/icon-close-menu.svg" alt="" />
 						</button>
@@ -163,7 +146,7 @@ onClickOutside(outSide, () => {
 									/>
 									<img v-else src="../assets/images/icon-arrow-up.svg" alt="" />
 								</button>
-								<ul v-if="feature" pl-5 my-5 space-y-5>
+								<ul v-if="feature" class="pl-5 my-5 space-y-5">
 									<li
 										v-for="feature in features"
 										:key="feature"
@@ -186,7 +169,7 @@ onClickOutside(outSide, () => {
 									/>
 									<img v-else src="../assets/images/icon-arrow-up.svg" alt="" />
 								</button>
-								<ul v-if="company" pl-5 my-5 space-y-5>
+								<ul v-if="company" class="pl-5 my-5 space-y-5">
 									<li>History</li>
 									<li>Our Team</li>
 									<li>Blog</li>
