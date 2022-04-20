@@ -4,7 +4,7 @@ import Navigation from "./components/Navigation.vue";
 
 <template>
 	<Navigation />
-	<main lg="flex items-center justify-between px-35">
+	<main lg="flex items-center justify-between px-35 mb-10">
 		<img
 			src="./assets/images/image-hero-mobile.png"
 			alt=""
