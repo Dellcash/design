@@ -4,6 +4,12 @@ import Navigation from "./components/Navigation.vue";
 
 <template>
 	<Navigation />
+	<main>
+		<img src="./assets/images/image-hero-mobile.png" alt="" w-full h-full />
+		<div mt-8>
+			<h2 text="center 1.8rem Black">Make remote work</h2>
+		</div>
+	</main>
 </template>
 
 <style>
@@ -20,5 +26,9 @@ button {
 	border: none;
 	background-color: transparent;
 	outline: none;
+}
+
+li {
+	list-style: none;
 }
 </style>
