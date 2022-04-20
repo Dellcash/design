@@ -121,11 +121,11 @@ onClickOutside(outSide, () => {
 		<div hidden lg:block space-x-5>
 			<button text="base Gray" p-4 hover:text-Black>Login</button>
 			<button
-				text="base White"
+				text="base Gray"
+				border
 				rounded-5
 				px-5
 				py-3
-				bg-Black
 				hover="bg-transparent border text-Black"
 			>
 				Register
