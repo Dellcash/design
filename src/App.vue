@@ -14,7 +14,7 @@ import Navigation from "./components/Navigation.vue";
 		/>
 		<div lg="mr-30 mt-20">
 			<div mt-8 text="center lg:left">
-				<h2 text="1.8rem Black lg:5rem">Make remote work</h2>
+				<h2 text="1.8rem Black lg:4.5rem" lg:pr-12>Make remote work</h2>
 				<p
 					text="Gray sm lg:16px"
 					p="x-5 lg:x-0 lg:r-20"
