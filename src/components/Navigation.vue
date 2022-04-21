@@ -138,7 +138,7 @@ onClickOutside(outSide, () => {
 						<ul text="sm Gray">
 							<li mb-3>
 								<button @click="feature = !feature">
-									<span text-Gray pr-2>Features</span>
+									<span text="Gray sm" pr-2>Features</span>
 									<img
 										v-if="!feature"
 										src="../assets/images/icon-arrow-down.svg"
@@ -161,7 +161,7 @@ onClickOutside(outSide, () => {
 
 							<li mb-3>
 								<button @click="company = !company">
-									<span text-Gray pr-2>Company</span>
+									<span text="Gray sm" pr-2>Company</span>
 									<img
 										v-if="!company"
 										src="../assets/images/icon-arrow-down.svg"
@@ -176,8 +176,8 @@ onClickOutside(outSide, () => {
 								</ul>
 							</li>
 
-							<li mb-3>Careers</li>
-							<li>About</li>
+							<li mb-3 text-sm>Careers</li>
+							<li text-sm>About</li>
 						</ul>
 					</div>
 				</div>
